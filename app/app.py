@@ -119,10 +119,6 @@ def handle_disconnect():
         emit('show_score', {'player': 0}, to=remaining_player)
         emit('remove_listener', to=remaining_player)
     print(f'Client disconnected: {request.sid}')
-
-@socketio.on('message')
-def handle_message(message):
-    emit('message', message, broadcast=True)
-
+    
 if __name__ == '__main__':
     socketio.run(app)

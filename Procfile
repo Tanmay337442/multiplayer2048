@@ -1,1 +1,1 @@
-web: gunicorn -w 4 -k eventlet -b 0.0.0.0:8000 app.app:app
+web: gunicorn --bind=0.0.0.0 --timeout 600 --access-logfile '-' --error-logfile '-' --worker-class eventlet app.app:app

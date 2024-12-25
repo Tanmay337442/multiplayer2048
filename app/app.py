@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify, session, redirect, url_for, make_response
+from flask import Flask, render_template, request, jsonify, redirect, url_for, make_response
 from flask_socketio import SocketIO, join_room, leave_room, emit
 import logic
 import uuid

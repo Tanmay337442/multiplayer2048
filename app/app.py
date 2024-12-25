@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, jsonify, redirect, url_for, m
 from flask_socketio import SocketIO, join_room, leave_room, emit
 import os
 print("Current working directory:", os.getcwd())
-import logic
+from app import logic
 import uuid
 
 app = Flask(__name__)

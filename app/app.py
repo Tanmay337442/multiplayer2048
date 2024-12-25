@@ -4,7 +4,7 @@ import logic
 import uuid
 
 app = Flask(__name__)
-socketio = SocketIO(app, cors_allowed_origins="*", logger=True, engineio_logger=True, async_handlers=True)
+socketio = SocketIO(app, cors_allowed_origins="*", logger=True, engineio_logger=True, async_handlers=True, async_mode='eventlet')
 app.secret_key = '06ae106f5b4e740059c97782'
 client_rooms = {}
 game_rooms = {}

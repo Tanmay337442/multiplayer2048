@@ -2,10 +2,11 @@ from flask import Flask, render_template, request, redirect, url_for, make_respo
 from flask_socketio import SocketIO, join_room, emit
 from app import logic
 import uuid
+import os
 
 app = Flask(__name__)
 socketio = SocketIO(app, cors_allowed_origins="*", logger=True, engineio_logger=True, async_handlers=True, async_mode='eventlet')
-app.secret_key = '06ae106f5b4e740059c97782'
+app.secret_key = os.getenv('SECRET_KEY', '06ae106f5b4e740059c97782')
 client_rooms = {}
 game_rooms = {}
 

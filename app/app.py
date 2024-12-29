@@ -10,6 +10,8 @@ app.secret_key = os.getenv('SECRET_KEY', '06ae106f5b4e740059c97782')
 client_rooms = {}
 game_rooms = {}
 
+print(app.secret_key)
+
 @app.route('/')
 def index():
     return render_template('index.html')
